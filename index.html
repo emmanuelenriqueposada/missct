@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Ti Linda mamá 10-05-2026 🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Pinyon+Script&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="galactica.css"/>
+</head>
+<body>
+
+  <!-- Canvas hiperespacio (fondo) -->
+  <canvas id="warp-canvas"></canvas>
+
+  <!-- Canvas pétalos -->
+  <canvas id="petals-canvas"></canvas>
+
+  <div id="app">
+
+    <!-- ═══ PANTALLA INTRO ═══ -->
+    <div id="intro" class="screen active">
+
+      <div class="intro-top-deco" aria-hidden="true">
+        <span class="pink-line"></span>
+        <span class="deco-star">✦</span>
+        <span class="pink-line"></span>
+      </div>
+
+      <p class="intro-label">Un mensaje que viaja desde las estrellas, hasta ti.</p>
+
+      <div id="rose-wrap">
+        <div class="rose-glow-outer"></div>
+        <canvas id="rose-canvas" role="button" tabindex="0" aria-label="Tocar la rosa para abrir tu carta"></canvas>
+        <div class="sparkles-wrap" id="sparkles"></div>
+        <div class="orbit-ring or1"><div class="orbit-dot od1">✦</div></div>
+        <div class="orbit-ring or2"><div class="orbit-dot od2">🌸</div></div>
+        <div class="orbit-ring or3"><div class="orbit-dot od3">·</div></div>
+      </div>
+
+      <h1 class="intro-title">Para<br><em>Una Super Mamá</em></h1>
+      <p class="intro-hint">✦ Toca la rosa Seño Carla Trejo ✦</p>
+      <p class="intro-hint">✦ Para abrir tu carta ✦</p>
+
+    </div>
+
+    <!-- ═══ PANTALLA CARTA ═══ -->
+    <div id="carta" class="screen">
+      <div class="carta-inner">
+
+        <header class="carta-header">
+          <div class="header-orn">
+            <span class="orn-line"></span>
+            <span class="orn-icon">🌸</span>
+            <span class="orn-line"></span>
+          </div>
+          <h2 class="carta-titulo">Para ti bella mamá </h2>
+          <p class="carta-fecha">Con amor, en este día tan especial 10 - 05 - 2026</p>
+        </header>
+
+        <div id="music-bar" role="button" tabindex="0" aria-label="Música">
+          <div class="music-rose-icon">🌸</div>
+          <span class="music-label">Música para Miss Trejo</span>
+          <div class="music-bars" id="music-bars">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="carta-body">
+
+          <p class="saludo">Mamá querida,</p>
+
+          <div class="sep"><span class="sep-line"></span><span class="sep-icon">🌸</span><span class="sep-line"></span></div>
+
+          <p class="parrafo">
+            Como una rosa que florece cada primavera sin importar el frío que haya pasado,
+            así eres tú — siempre llena de luz, siempre llena de amor, siempre fuerte.
+            Cada espina que la vida te puso, la convertiste en fortaleza.
+            Cada tormenta que enfrentaste, la convertiste en jardín.
+          </p>
+
+          <blockquote class="cita">
+            <span class="cita-mark">❝</span>
+            Una madre es la rosa más perfecta del jardín de Dios —
+            fragante en el dar, eterna en el amar.
+            <span class="cita-mark close">❞</span>
+          </blockquote>
+
+          <p class="parrafo">
+            Gracias por tus enseñanzas en cada etapa de mi vida,
+            por estar ahí, cada vez que la vida me tropieza.
+            Por ese abrazo, que no necesita palabras para decir todo.
+            Por esa mirada, que me conoce mejor que yo.
+          </p>
+
+          <div class="sep"><span class="sep-line"></span><span class="sep-icon">💗</span><span class="sep-line"></span></div>
+
+          <p class="parrafo">
+            Si pudiera regalarte todas las estrellas del universo,
+            no serían suficientes para expresar lo que tu esfuerzo vale para mi.
+            Pero hoy te regalo lo que sí tengo:
+            mis pensamientos positivos, mi gratitud infinita y mi cariño para siempre.
+          </p>
+
+          <div class="roses-row" aria-hidden="true">🌸 ✦ 🌸 ✦ 🌸</div>
+
+          <p class="parrafo center">
+            Que cada pétalo rosado que viaja por el universo te recuerde
+            cuánto te quiero. Hoy, mañana y por toda la eternidad.
+          </p>
+
+        </div>
+
+        <footer class="carta-footer">
+          <div class="sep"><span class="sep-line"></span><span class="sep-icon">💕</span><span class="sep-line"></span></div>
+          <p class="firma-texto">Con todo el amor del mundo,</p>
+          <p class="firma-nombre">Ely Mariana🌸</p>
+        </footer>
+
+        <!-- Botón para ver la foto -->
+        <div class="foto-section">
+          <div class="sep"><span class="sep-line"></span><span class="sep-icon">📸</span><span class="sep-line"></span></div>
+          <button id="btn-foto" class="btn-foto" aria-label="Ver foto especial">
+            <span class="foto-btn-icon">🌸</span>
+            <span>Ver nuestra foto especial</span>
+            <span class="foto-btn-icon">🌸</span>
+          </button>
+          <p class="foto-hint">Toca para ver la sorpresa</p>
+        </div>
+
+        <div class="footer-orn">
+          <span class="orn-line"></span>
+          <span class="orn-icon">✦</span>
+          <span class="orn-line"></span>
+        </div>
+
+      </div>
+
+      <button id="btn-back" class="btn-back">← Volver al cosmos</button>
+    </div>
+
+  </div>
+
+  <!-- ═══ LIGHTBOX DE IMAGEN ═══ -->
+  <div id="lightbox" aria-modal="true" role="dialog" aria-label="Foto especial">
+    <div id="lightbox-bg"></div>
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="segundob.png" alt="Miss Carla con sus alumnos del Colegio Lourdes"/>
+      <p id="lightbox-caption">🌸 Con todo el cariño de sus estudiante 2° B 🌸</p>
+      <button id="lightbox-close" aria-label="Cerrar imagen">✕</button>
+    </div>
+  </div>
+
+  <!-- Botón música flotante -->
+  <button id="music-float" class="music-float" aria-label="Música" style="display:none">
+    <span id="music-icon">🎵</span>
+    <div class="float-waves" id="float-waves">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </button>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="musica.mp3" type="audio/mpeg"/>
+  </audio>
+
+  <script src="galactica.js"></script>
+</body>
+</html>
